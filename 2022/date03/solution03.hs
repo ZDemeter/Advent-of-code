@@ -2,14 +2,15 @@ import System.IO
 import Data.List
 
 main = do
-    input <- readFile "input.txt"
+    input <- readFile "example.txt"
     putStr "1. "
     print $ solution1 $ lines input
     putStr "2. "
     print $ solution2 $ lines input
 
 -- solution1 :: [String] -> a
-solution1 = sum . map (getPriority . head . getSame . splitInTwo)
+-- solution1 = sum . map (getPriority . head . getSame . splitInTwo)
+solution1 x = x
 
 splitInTwo :: String -> (String, String)
 splitInTwo items = splitAt (length items `div` 2) items

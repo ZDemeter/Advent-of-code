@@ -24,7 +24,8 @@ main = do
 
 
 solution1 :: [String] -> IO ()
-solution1 = print . sum . map (evaluatePoints . parseHand)
+-- solution1 = print . sum . map (evaluatePoints . parseHand)
+solution1 x = print x
 
 parseHand :: String -> (Hand, Hand)
 parseHand rawGame = let

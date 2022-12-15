@@ -1,7 +1,7 @@
 import System.IO
 import Data.Char
 import Data.List (sort, map)
-import Debug.Trace
+-- import Debug.Trace
 
 import Data.Typeable
 -- main = putStrLn "Hello, Haskell! :)"
@@ -39,7 +39,7 @@ solution2 handle = do
     print . get3Highest . toNestedList . lines $ arrayOfValues
 
 get3Highest :: [[Int]] -> Int
-get3Highest = sumTopThree . reverse . (Trace "Testint trace") . sort . sumNested
+get3Highest = sumTopThree . reverse . sort . sumNested
     where
         sumNested = map sum
         sumTopThree = sum . (take 3)
